@@ -11,30 +11,76 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @media (max-width: 640px) {
+            header{
+                margin: 5px ;
+                padding: 0;
+            }
+            .logo-title{
+                font-size: 15px;
+            }
+            .heart-container{
+                width: 60px;
+                height: 25px;
+            }
+            #hart-count{
+                font-size: 20px;
+
+            }
+            .heart-img{
+                width: 15px;
+                height: 15px;
+            }
+            .coin-container{
+                width: 60px;
+                height: 25px;
+            }
+            .coin-balance{
+                font-size: 20px;
+
+            }
+            .coin-img{
+                width: 15px;
+                height: 15px;
+            }
+            .copy{
+                width: 70px;
+                height: 30px;
+                font-size: 20px;
+                padding: 5px;
+            }
+            .banner{
+                height: auto;
+                padding: 10px 0 10px;
+            }
+        }
+    </style>
+    </style>
 </head>
 <body>
     <header class="flex justify-between items-center p-4 bg-white h-[100px] lg:mx-[60px]">
         <div class="flex gap-2 items-center">
             <img class="w-[50px] h-[50px]" src="assets/logo.png" alt="">
-            <h1 class="text-[#006747] font-bold text-2xl sm:text-xl">Emergency <br>Service</h1>
+            <h1 class="logo-title text-[#006747] font-bold text-2xl sm:text-xl">Emergency <br>Service</h1>
         </div>
         <div class="flex gap-3 items-center">
-            <div class="w-[106px] h-[52px] flex gap-2 bg-[#41FF6B]/10 rounded-[40px] items-center justify-center">
+            <div class="heart-container w-[106px] h-[52px] flex gap-2 bg-[#41FF6B]/10 rounded-[40px] items-center justify-center">
                 <span id="hart-count" class="font-bold text-xl">0</span>
-                <img class="w-[30px] h-[30px]" src="assets/heart.png" alt="">
+                <img class="heart-img w-[30px] h-[30px]" src="assets/heart.png" alt="">
             </div>
-            <div class="w-[106px] h-[52px] flex gap-2 bg-[#41FF6B]/10 rounded-[40px] items-center justify-center">
+            <div class="coin-container w-[106px] h-[52px] flex gap-2 bg-[#41FF6B]/10 rounded-[40px] items-center justify-center">
                 <span id="coin-balance" class="font-bold text-xl">100</span>
-                <img class="w-[30px] h-[30px]" src="assets/coin.png" alt="">
+                <img class="coin-img w-[30px] h-[30px]" src="assets/coin.png" alt="">
             </div>
             <div>
-                <p class="w-[127px] h-[52px] bg-[#00A63E] rounded-[40px] flex items-center justify-center text-[#ffffff] font-bold text-xl"><span id="copy-count" class="mr-2">0</span>copy</p>
+                <p class="copy w-[127px] h-[52px] bg-[#00A63E] rounded-[40px] flex items-center justify-center text-[#ffffff] font-bold text-xl"><span id="copy-count" class="mr-2">0</span>copy</p>
             </div>
         </div>
     </header>
     <main>
         <!-- banner section -->
-        <section class="h-[239px] flex flex-col items-center justify-center gap-4 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center text-[#ffffff]">
+        <section class="banner h-[239px] flex flex-col items-center justify-center gap-4 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center text-[#ffffff]">
             <img class="w-[92px] h-[92px]" src="assets/logo-dark.png" alt="">
             <h1 class="font-bold text-[40px]">Emergency Service Directory</h1>
             <p class="font-semibold text-[15px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
