@@ -7,8 +7,10 @@ function addHeart() {
 
 function coinAlert(service, number, title) {
   const callHistory = document.getElementById("call-history");
+
   const now = new Date();
   const time = now.toLocaleTimeString();
+
   const parentDiv = document.createElement("div");
   parentDiv.style.display = "flex";
 
@@ -45,6 +47,7 @@ function coinAlert(service, number, title) {
   const newCoinBalance = coinBalance - 20;
   const callingId = document.getElementById(service).innerText;
   const callingNumber = document.getElementById(number).innerText;
+  
   if (coinBalance >= 20) {
     document.getElementById("coin-balance").innerText = newCoinBalance;
     alert("📞calling" + callingId + callingNumber + "...");
@@ -76,15 +79,10 @@ function numCopy(numberId) {
 }
 
 // Heart Icons Event Listeners
-document.getElementById("heart-1").addEventListener("click", addHeart);
-document.getElementById("heart-2").addEventListener("click", addHeart);
-document.getElementById("heart-3").addEventListener("click", addHeart);
-document.getElementById("heart-4").addEventListener("click", addHeart);
-document.getElementById("heart-5").addEventListener("click", addHeart);
-document.getElementById("heart-6").addEventListener("click", addHeart);
-document.getElementById("heart-7").addEventListener("click", addHeart);
-document.getElementById("heart-8").addEventListener("click", addHeart);
-document.getElementById("heart-9").addEventListener("click", addHeart);
+const hearts = document.getElementsByClassName("fa-heart");
+for (let heart of hearts) {
+  heart.addEventListener("click", addHeart);
+}
 
 // call icon event listeners
 document.getElementById("call-1").addEventListener("click", function () {
@@ -123,16 +121,10 @@ document.getElementById("clear-btn").addEventListener("click", function () {
 
 // copy button js
 
-document.getElementById("copy-1").addEventListener("click", addCopy);
-document.getElementById("copy-1").addEventListener("click", addCopy);
-document.getElementById("copy-2").addEventListener("click", addCopy);
-document.getElementById("copy-3").addEventListener("click", addCopy);
-document.getElementById("copy-4").addEventListener("click", addCopy);
-document.getElementById("copy-5").addEventListener("click", addCopy);
-document.getElementById("copy-6").addEventListener("click", addCopy);
-document.getElementById("copy-7").addEventListener("click", addCopy);
-document.getElementById("copy-8").addEventListener("click", addCopy);
-document.getElementById("copy-9").addEventListener("click", addCopy);
+const copys = document.getElementsByClassName('copy-btn');
+for (let copy of copys){
+  copy.addEventListener('click', addCopy);
+}
 
 
 document.getElementById('copy-1').addEventListener('click', function(){
