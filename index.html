@@ -13,10 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         @media (max-width: 640px) {
-            header{
-                margin: 5px ;
-                padding: 0;
+            header {
+                 margin: 5px 5px;
+                 padding: 0;
+                 height: auto;
             }
+           
             .logo-title{
                 font-size: 15px;
             }
@@ -45,14 +47,17 @@
                 height: 15px;
             }
             .copy{
-                width: 70px;
+                width: 80px;
                 height: 30px;
-                font-size: 20px;
+                font-size: 15px;
                 padding: 5px;
             }
             .banner{
                 height: auto;
-                padding: 10px 0 10px;
+                padding: 20px;
+            }
+            .banner-title{
+                font-size: 30px;
             }
         }
     </style>
@@ -60,11 +65,11 @@
 </head>
 <body>
     <header class="flex justify-between items-center p-4 bg-white h-[100px] lg:mx-[60px]">
-        <div class="flex gap-2 items-center">
+        <div class="header-left flex gap-2 items-center">
             <img class="w-[50px] h-[50px]" src="assets/logo.png" alt="">
             <h1 class="logo-title text-[#006747] font-bold text-2xl sm:text-xl">Emergency <br>Service</h1>
         </div>
-        <div class="flex gap-3 items-center">
+        <div class="header-right flex gap-3 items-center">
             <div class="heart-container w-[106px] h-[52px] flex gap-2 bg-[#41FF6B]/10 rounded-[40px] items-center justify-center">
                 <span id="hart-count" class="font-bold text-xl">0</span>
                 <img class="heart-img w-[30px] h-[30px]" src="assets/heart.png" alt="">
@@ -73,8 +78,8 @@
                 <span id="coin-balance" class="font-bold text-xl">100</span>
                 <img class="coin-img w-[30px] h-[30px]" src="assets/coin.png" alt="">
             </div>
-            <div>
-                <p class="copy w-[127px] h-[52px] bg-[#00A63E] rounded-[40px] flex items-center justify-center text-[#ffffff] font-bold text-xl"><span id="copy-count" class="mr-2">0</span>copy</p>
+            <div id="copy">
+                <p class="copy w-[127px] h-[52px] bg-[#00A63E] rounded-[40px] flex items-center justify-center text-[#ffffff] font-bold text-xl"><span id="copy-count" class="mr-1">0</span>copy</p>
             </div>
         </div>
     </header>
@@ -82,7 +87,7 @@
         <!-- banner section -->
         <section class="banner h-[239px] flex flex-col items-center justify-center gap-4 bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center text-[#ffffff]">
             <img class="w-[92px] h-[92px]" src="assets/logo-dark.png" alt="">
-            <h1 class="font-bold text-[40px]">Emergency Service Directory</h1>
+            <h1 class="banner-title font-bold text-[40px]">Emergency Service Directory</h1>
             <p class="font-semibold text-[15px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
         </section>
         <!-- cards section -->
